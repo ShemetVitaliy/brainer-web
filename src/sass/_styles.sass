@@ -4,6 +4,21 @@ div[target="_blank"],
 a[title]
   display: none !important
 
+body.fixed
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100vh
+
+#root
+  display: block
+
+  &.hide
+    display: none
+
 .thanks-message
   opacity: 0
   position: absolute
@@ -78,6 +93,19 @@ a[title]
 
     &:after
       border-left-color: $purple-color
+  &.black
+    border: 2px solid $black-color
+    color: $black-color
+
+    &:after
+      border-left-color: $black-color
+
+    &:hover
+      border-color: $black-color-hover
+      color: $black-color-hover
+
+      &:after
+        border-left-color: $black-color-hover
 
 .title-wrapper
   display: flex

@@ -1,0 +1,32 @@
+@import "settings"
+@import "mixin"
+#cd-vertical-nav
+  position: fixed
+  right: 20px
+  top: 40%
+  bottom: auto
+  z-index: 1
+  @include breakpoint(tablet)
+    display: none
+  ul
+    text-align: center
+  a
+    display: inline-block
+    backface-visibility: hidden
+
+    &.is-selected
+      .cd-dot
+        background-color: $white-color
+        position: relative
+        left: 1px
+        width: 5px
+        height: 5px
+        border-radius: 50%
+
+  .cd-dot
+    display: inline-block
+    position: relative
+    width: 2px
+    height: 2px
+    background-color: $white-color
+    border-radius: 50%

@@ -1,0 +1,158 @@
+@import "settings"
+@import "mixin"
+.popup
+  width: 100%
+  height: 100%
+  display: none
+  opacity: 0
+  min-height: 20000px
+
+  &.show
+    display: block
+    opacity: 1
+    height: auto
+    position: relative
+    z-index: 100
+
+  .name-section
+    padding-left: 0
+
+  .text-row
+    padding-bottom: 92px
+
+    p
+      font-family: $montserratRegular
+      font-size: 18px
+      color: #222222
+      line-height: 36px
+      padding: 0 0 25px 0
+      margin: 0
+
+.controls-popup
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .prev-project,
+  .next-project
+    font-family: $montserratRegular
+    color: $white-color
+    font-size: 13px
+    transition: $transition
+
+    &:hover
+      color: $white-color-hover
+
+  .prev-project
+    padding-left: 82px
+    background: url("../img/icons/arrow-left-white.png") no-repeat 0 6px
+
+  .next-project
+    padding-right: 82px
+    background: url("../img/icons/arrow-right-white.png") no-repeat 100% 6px
+
+  .project-name
+    font-family: $montserratThin
+    color: $white-color
+    font-size: 21px
+    display: inline-block
+    padding: 0 80px
+
+.banner-popup
+  background-repeat: no-repeat
+  background-size: 100% 500px
+  background-position: center
+
+  &__header
+    min-height: 60px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    transition: top ease-in-out 0.3s
+    top: -60px
+    background: rgba(0, 148, 236, .9)
+
+    &.fixed-header
+      position: fixed
+      z-index: 100
+      left: 0
+      top: 0
+      right: 0
+      width: 100%
+      min-height: 40px
+
+      .container
+        min-height: 40px
+
+      .icon-close
+        top: 9px
+
+    .logo
+      width: 125px
+      display: flex
+      flex-shrink: 0
+      align-items: center
+      margin-right: 115px
+
+      img
+        width: 100%
+        max-width: 125px
+
+    .container
+      display: flex
+      align-items: center
+      width: 100%
+      justify-content: flex-start
+      position: relative
+
+    .icon-close
+      color: $white-color
+      transition: $transition
+      cursor: pointer
+      flex-shrink: 0
+      position: absolute
+      right: 0
+      top: 3px
+
+      &:hover
+        color: $white-color-hover
+
+  .banner-img
+    margin-top: -60px
+    position: relative
+    z-index: -1
+
+.project
+  margin-top: -180px
+  display: flex
+  align-items: flex-end
+
+  &__logo
+    width: 280px
+    margin-right: 110px
+
+  .about-project
+    padding-bottom: 15px
+    display: flex
+
+    &__item
+      padding-right: 100px
+
+      strong
+        display: block
+        font-family: $montserratSemiBold
+        font-size: 13px
+        color: #222222
+        padding-bottom: 15px
+
+      span
+        display: block
+        font-family: $montserratThin
+        font-size: 18px
+        color: #222222
+
+
+
+
+

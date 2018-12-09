@@ -30,8 +30,11 @@
 	@if $filename == behance-logo {
 		$char: "\E001";
 	}
-	@if $filename == fb {
+	@if $filename == close {
 		$char: "\E002";
+	}
+	@if $filename == fb {
+		$char: "\E003";
 	}
 
 	@return $char;
@@ -50,6 +53,9 @@
 
 .icon-behance-logo {
 	@include icon(behance-logo);
+}
+.icon-close {
+	@include icon(close);
 }
 .icon-fb {
 	@include icon(fb);
