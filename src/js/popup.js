@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('#root').removeClass('hide');
   });
 
-  let testPopupClick = $('.testPopupClick');
+  let testPopupClick = $('.bubnovskyPopup');
   testPopupClick.click(function () {
     $('#root').addClass('hide');
     $('.popup').removeClass('show');
