@@ -1,47 +1,109 @@
 @import "../settings"
 @import "../mixin"
+.container-full
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  img
+    margin-bottom: 48px
+    width: 100%
+    box-shadow: $boxShadowPopup
+
 .projects-page
   background: linear-gradient(to bottom, #f1eefc 0%, #e8f3fd 100%)
 
-.projects-main
-  background: url("../../img/project-page/main-bg.png") no-repeat 0 0
-  background-size: cover
-  padding-bottom: 60px
-  .projects-title
-    padding-top: 100px
-    padding-bottom: 100px
-    text-transform: uppercase
-    font-family: $montserratBlack
-    font-size: 42px
-    color: $white-color
-    text-align: center
+  .projects-main
+    background: url("../../img/project-page/main-bg.png") no-repeat 0 0
+    background-size: cover
+    padding-bottom: 60px
 
+    .projects-title
+      padding-top: 100px
+      padding-bottom: 100px
+      text-transform: uppercase
+      font-family: $montserratBlack
+      font-size: 42px
+      color: $white-color
+      text-align: center
 
-.filter-nav
-  padding: 0 100px
-  display: flex
-  width: 100%
-  justify-content: space-around
-  margin-bottom: 36px
-  a
-    padding: 0 10px
-    margin: 0 15px
-    height: 36px
+  .filter-nav
+    padding: 0 100px
     display: flex
-    align-items: center
-    justify-content: center
-    font-size: 13px
+    width: 100%
+    justify-content: space-around
+    margin-bottom: 36px
+
+    a
+      padding: 0 10px
+      margin: 0 15px
+      height: 36px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 13px
+      font-family: $montserratRegular
+      color: $white-color
+      text-transform: uppercase
+      border-top: 1px solid transparent
+      border-bottom: 1px solid transparent
+      transition: $transition
+
+      &.all
+        border-top: 1px solid $white-color
+        border-bottom: 1px solid $white-color
+
+      &:hover
+        background-color: $purple-color
+        border-top: 1px solid $purple-color
+        border-bottom: 1px solid $purple-color
+
+.design-wrapper
+  text-align: center
+  padding-bottom: 73px
+
+  .name-section
+    text-align: left
+
+  .design-item
+    margin-bottom: 75px
+
+    &:last-of-type
+      margin-bottom: 0
+
+  .design-title
     font-family: $montserratRegular
     color: $white-color
-    text-transform: uppercase
-    border-top: 1px solid transparent
-    border-bottom: 1px solid transparent
-    transition: $transition
-    &.all
-      border-top: 1px solid $white-color
-      border-bottom: 1px solid $white-color
-    &:hover
-      background-color: $purple-color
-      border-top: 1px solid $purple-color
-      border-bottom: 1px solid $purple-color
+    font-size: 18px
+    display: inline-block
+    position: relative
+    z-index: 5
+    margin-bottom: 25px
+    &.black
+      color: $black-color !important
+    .number
+      font-family: $montserratBlack
+      font-size: 105px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      color: rgba(255, 255, 255, .08)
+      z-index: -1
 
+      &.black
+        color: rgba(0, 0, 0, .08)
+
+
+
+  .design-img
+    margin: 0 auto
+    width: 100%
+    max-width: 780px
+
+    img
+      box-shadow: $boxShadowPopup
+
+.category-projects
+  padding-bottom: 73px
