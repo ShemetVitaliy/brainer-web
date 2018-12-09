@@ -1,0 +1,47 @@
+@import "../settings"
+@import "../mixin"
+.projects-page
+  background: linear-gradient(to bottom, #f1eefc 0%, #e8f3fd 100%)
+
+.projects-main
+  background: url("../../img/project-page/main-bg.png") no-repeat 0 0
+  background-size: cover
+  padding-bottom: 60px
+  .projects-title
+    padding-top: 100px
+    padding-bottom: 100px
+    text-transform: uppercase
+    font-family: $montserratBlack
+    font-size: 42px
+    color: $white-color
+    text-align: center
+
+
+.filter-nav
+  padding: 0 100px
+  display: flex
+  width: 100%
+  justify-content: space-around
+  margin-bottom: 36px
+  a
+    padding: 0 10px
+    margin: 0 15px
+    height: 36px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 13px
+    font-family: $montserratRegular
+    color: $white-color
+    text-transform: uppercase
+    border-top: 1px solid transparent
+    border-bottom: 1px solid transparent
+    transition: $transition
+    &.all
+      border-top: 1px solid $white-color
+      border-bottom: 1px solid $white-color
+    &:hover
+      background-color: $purple-color
+      border-top: 1px solid $purple-color
+      border-bottom: 1px solid $purple-color
+

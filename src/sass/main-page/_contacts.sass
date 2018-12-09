@@ -1,0 +1,113 @@
+@import "../settings"
+@import "../mixin"
+.contacts
+  padding-bottom: 110px
+
+  .flex-row
+    display: flex
+    width: 100%
+
+    .cell
+      width: 50%
+
+      &:first-child
+        padding-left: 100px
+
+  .title
+    justify-content: flex-start
+    text-align: left
+    padding-bottom: 42px
+
+  .text
+    font-family: $montserratLight
+    font-size: 18px
+    color: $black-color
+    padding-bottom: 28px
+    display: block
+    max-width: 315px
+    line-height: 24px
+
+  .social
+    display: flex
+    align-items: center
+
+    a
+      display: inline-block
+      margin-right: 25px
+      font-size: 18px
+      color: $black-color
+      transition: $transition
+
+      &.icon-fb
+        font-size: 16px
+
+      &:hover
+        color: $purple-color
+
+  .send-form
+    width: 100%
+    display: block
+    max-width: 480px
+
+    input
+      display: block
+      width: 100%
+      height: 60px
+      border: none
+      border-bottom: 1px solid $black-color
+      font-family: $montserratLight
+      font-size: 13px
+      color: $black-color
+      transition: $transition
+
+      &:focus
+        border-color: $purple-color
+      @include placeholder(13px, $black-color)
+
+    textarea
+      display: block
+      width: 100%
+      height: 86px
+      resize: none
+      margin-bottom: 35px
+      border: none
+      border-bottom: 1px solid $black-color
+      margin-top: 20px
+      padding-bottom: 5px
+      transition: $transition
+      font-family: $montserratLight
+      font-size: 13px
+      color: $black-color
+
+      &:focus
+        outline: 0
+        border-color: $purple-color
+
+    textarea::-webkit-input-placeholder
+      color: $black-color
+      font-size: 13px
+      font-family: $montserratLight
+
+    textarea:-moz-placeholder
+      color: $black-color
+      font-size: 13px
+
+      font-family: $montserratLight
+
+    textarea::-moz-placeholder
+      color: $black-color
+      font-size: 13px
+
+      font-family: $montserratLight
+
+    textarea:-ms-input-placeholder
+      color: $black-color
+      font-size: 13px
+
+      font-family: $montserratLight
+
+    .btn
+      text-transform: uppercase
+      font-family: $montserratBold
+      font-size: 16px
+      min-width: 280px

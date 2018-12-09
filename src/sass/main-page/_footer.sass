@@ -1,0 +1,33 @@
+@import "../settings"
+@import "../mixin"
+.footer
+  padding: 42px 0 22px 0
+  background-color: #1293df
+
+.footer-row
+  padding: 0 100px
+  display: flex
+  width: 100%
+  justify-content: space-between
+  color: $white-color
+
+  a
+    color: $white-color
+    display: inline-block
+    font-family: $montserratLight
+    font-size: 18px
+    transition: $transition
+
+    &:hover
+      color: $white-color-hover
+
+  &__title
+    font-family: $montserratBold
+    font-size: 34px
+
+.copyright
+  padding-top: 20px
+  color: $white-color
+  text-align: center
+  font-family: $montserratLight
+  font-size: 13px

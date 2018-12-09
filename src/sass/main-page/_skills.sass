@@ -1,0 +1,37 @@
+@import "../settings"
+@import "../mixin"
+.skills
+  background: #7b60df
+  padding-bottom: 100px
+  color: $white-color
+
+  .name-section
+    padding-top: 45px
+    padding-bottom: 45px
+    color: $white-color
+
+.skills-list
+  display: flex
+  width: 100%
+  flex-wrap: wrap
+  justify-content: space-around
+  padding: 0 100px
+
+  &__item
+    padding: 0 15px
+    width: calc(100% / 5)
+    margin-bottom: 25px
+    display: flex
+    justify-content: center
+
+  &__content
+    width: 125px
+    height: 125px
+    border: 1px solid $white-color-hover
+    text-transform: uppercase
+    color: $white-color
+    font-family: $montserratBold
+    font-size: 18px
+    display: flex
+    align-items: center
+    justify-content: center

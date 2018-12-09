@@ -1,0 +1,148 @@
+@import "../settings"
+@import "../mixin"
+.header
+  background: $headerGradient
+  transition: top ease-in-out 0.3s
+  top: -60px
+
+  &.fixed-header
+    position: fixed
+    z-index: 100
+    left: 0
+    top: 0
+    right: 0
+    width: 100%
+
+    .container
+      min-height: 45px
+
+    .submit-app
+      min-height: 45px
+
+  .container
+    display: flex
+    min-height: 60px
+    width: 100%
+    align-items: center
+    justify-content: space-between
+
+  .logo
+    width: 125px
+    display: flex
+    align-items: center
+    margin-right: 115px
+
+    img
+      width: 100%
+      max-width: 125px
+
+  nav
+    display: flex
+
+    a
+      display: inline-block
+      text-transform: uppercase
+      font-size: 13px
+      color: $white-color
+      opacity: 0.7
+      font-family: $montserratMedium
+      transition: $transition
+      margin: 0 30px
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+      &:hover,
+      &.active
+        opacity: 1
+
+  .submit-app
+    min-height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #8851dc
+    color: $white-color
+    font-family: $montserratMedium
+    font-size: 16px
+    padding: 0 65px
+    transition: $transition
+
+    &:hover
+      background-color: darken(#8851dc, 2%)
+
+  .lang
+    display: flex
+    align-items: center
+
+    li
+      padding: 0 14px
+      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) no-repeat 100% 50%
+      background-size: 1px 13px
+
+      &:last-child
+        background: 0 0
+
+    a
+      display: inline-block
+      font-size: 16px
+      font-family: $montserratRegular
+      color: rgba(255, 255, 255, 0.5)
+      transition: $transition
+
+      &:hover,
+      &.active
+        color: $white-color
+
+.banner
+  min-height: calc(100vh)
+  background: url("../../img/main-banner.jpg") no-repeat
+  background-size: cover
+  padding-top: 0
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 1px
+    height: 46px
+    background: $white-color-hover
+    left: calc(50% - 1px)
+    bottom: 47px
+
+  .flex-row
+    display: flex
+    width: 100%
+    align-items: center
+    min-height: calc(100vh - 60px)
+
+    .cell
+      width: 50%
+
+      &:first-child
+        padding: 130px 0 130px 95px
+
+  h1
+    text-transform: uppercase
+    color: $white-color
+    font-size: 80px
+    line-height: 1
+    padding-bottom: 15px
+
+    strong
+
+      font-family: $montserratBlack
+
+    span
+      font-family: $montserratThin
+      font-size: 56px
+
+  .desc
+    font-family: $montserratThin
+    color: $white-color
+    font-size: 34px
+    line-height: 1.2
+    padding-bottom: 50px
