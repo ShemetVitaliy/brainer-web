@@ -73,6 +73,8 @@ body.fixed
   background-color: transparent
   position: relative
   transition: $transition
+  @include breakpoint(mobile-l)
+    height: 45px
 
   &:after
     content: ''
