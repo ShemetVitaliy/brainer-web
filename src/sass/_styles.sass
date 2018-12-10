@@ -43,6 +43,13 @@ body.fixed
   padding-top: 96px
   padding-bottom: 60px
   padding-left: 100px
+  @include breakpoint(mobile-l)
+    width: 100%
+    padding-left: 0
+    padding-top: 50px
+    padding-bottom: 30px
+    text-align: center
+
   &.white
     color: $white-color
 

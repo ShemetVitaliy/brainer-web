@@ -23,12 +23,14 @@ $(document).ready(function() {
     $('.popup').removeClass('show');
     $('#dataMonstersPopup').addClass('show');
   });
+
   let greenmPopup = $('.greenmPopup');
   greenmPopup.click(function () {
     $('#root').addClass('hide');
     $('.popup').removeClass('show');
     $('#greenmPopup').addClass('show');
   });
+
   let kittelsPopup = $('.kittelsPopup');
   kittelsPopup.click(function () {
     $('#root').addClass('hide');

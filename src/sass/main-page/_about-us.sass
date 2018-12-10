@@ -3,17 +3,35 @@
 .about-us
   background: linear-gradient(to bottom, rgb(184, 215, 248) 0%, rgb(212, 239, 252) 98%, rgb(215, 240, 252) 100%)
   padding-bottom: 100px
+  @include breakpoint(mobile-l)
+    padding-bottom: 30px
 
   .flex-row
     display: flex
     width: 100%
     align-items: center
+    flex-wrap: wrap
+    padding-top: 12%
+    @include breakpoint(tablet)
+      padding: 0
 
     .cell
       width: 50%
+      @include breakpoint(tablet)
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
 
       &:first-child
         padding-left: 100px
+        @include breakpoint(tablet)
+          padding: 0
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+
 
   .title
     padding-bottom: 48px
@@ -24,6 +42,9 @@
     color: #1c1c1c
     line-height: 24px
     max-width: 355px
+    @include breakpoint(tablet)
+      max-width: 100%
+      padding: 0  10px 20px 10px
 
   .team
     img

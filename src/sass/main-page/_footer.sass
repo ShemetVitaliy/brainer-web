@@ -3,6 +3,9 @@
 .footer
   padding: 42px 0 22px 0
   background-color: #1293df
+  @include breakpoint(mobile-l)
+    padding: 22px 0 22px 0
+
 
 .footer-row
   padding: 0 100px
@@ -10,18 +13,30 @@
   width: 100%
   justify-content: space-between
   color: $white-color
+  @include breakpoint(tablet)
+    padding: 0 20px
+  @include breakpoint(mobile-l)
+    flex-direction: column
   .cell
     width: 33.33%
+    @include breakpoint(mobile-l)
+      width: 100%
+      padding-bottom: 15px
+      align-items: center
     &:nth-child(2)
       text-align: center
     &:last-child
       padding-left: 105px
+      @include breakpoint(mobile-l)
+        padding: 0
   a
     color: $white-color
     display: inline-block
     font-family: $montserratLight
     font-size: 18px
     transition: $transition
+    @include breakpoint(tablet)
+      font-size: 14px
 
     &:hover
       color: $white-color-hover
@@ -29,6 +44,10 @@
   &__title
     font-family: $montserratBold
     font-size: 34px
+    @include breakpoint(laptop)
+      font-size: 27px
+    @include breakpoint(tablet)
+      font-size: 21px
 
 .copyright
   padding-top: 20px
