@@ -10,6 +10,16 @@
     margin-bottom: 48px
     width: 100%
     box-shadow: $boxShadowPopup
+    @include breakpoint(laptop)
+      height: 520px
+    @include breakpoint(tablet)
+      height: 450px
+    @include breakpoint(mobile-l)
+      height: 280px
+    @include breakpoint(mobile-m)
+      height: 250px
+    @include breakpoint(mobile-s)
+      height: 200px
 
 .projects-page
   background: linear-gradient(to bottom, #f1eefc 0%, #e8f3fd 100%)

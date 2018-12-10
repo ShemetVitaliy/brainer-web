@@ -34,12 +34,16 @@
   align-items: center
   justify-content: center
 
+
+
   .prev-project,
   .next-project
     font-family: $montserratRegular
     color: $white-color
     font-size: 13px
     transition: $transition
+    @include breakpoint(tablet)
+      padding-right: 40px
 
     &:hover
       color: $white-color-hover
@@ -47,10 +51,14 @@
   .prev-project
     padding-left: 82px
     background: url("../img/icons/arrow-left-white.png") no-repeat 0 6px
+    @include breakpoint(tablet)
+      background: none
 
   .next-project
     padding-right: 82px
     background: url("../img/icons/arrow-right-white.png") no-repeat 100% 6px
+    @include breakpoint(tablet)
+      background: none
 
   .project-name
     font-family: $montserratThin
@@ -58,6 +66,8 @@
     font-size: 21px
     display: inline-block
     padding: 0 80px
+    @include breakpoint(tablet)
+      display: none
 
 .banner-popup
   background-repeat: no-repeat
@@ -69,10 +79,13 @@
     display: flex
     align-items: center
     justify-content: space-between
+    flex-wrap: wrap
+    flex-direction: row
     width: 100%
     transition: top ease-in-out 0.3s
     top: -60px
     background: rgba(0, 148, 236, .9)
+
 
     &.fixed-header
       position: fixed
@@ -95,6 +108,12 @@
       flex-shrink: 0
       align-items: center
       margin-right: 115px
+      @include breakpoint(laptop)
+        margin-right: 70px
+      @include breakpoint(tablet)
+        margin-right: 30px
+
+
 
       img
         width: 100%
@@ -115,6 +134,8 @@
       position: absolute
       right: 0
       top: 3px
+      @include breakpoint(laptop)
+        right: 20px
 
       &:hover
         color: $white-color-hover
@@ -128,10 +149,20 @@
   margin-top: -180px
   display: flex
   align-items: flex-end
+  @include breakpoint(laptop)
+    margin-top: -150px
+  @include breakpoint(tablet)
+    margin-top: -50px
+  @include breakpoint(mobile-l)
+    margin-top: 0
 
   &__logo
     width: 280px
     margin-right: 110px
+    @include breakpoint(tablet)
+      margin-right: 70px
+    @include breakpoint(mobile-l)
+      margin-right: 20px
 
   .about-project
     padding-bottom: 15px
@@ -139,6 +170,10 @@
 
     &__item
       padding-right: 100px
+      @include breakpoint(tablet)
+        padding-right: 70px
+      @include breakpoint(mobile-l)
+        padding-right: 20px
 
       strong
         display: block
@@ -146,9 +181,13 @@
         font-size: 13px
         color: #222222
         padding-bottom: 15px
+        @include breakpoint(mobile-l)
+          font-size: 10px
 
       span
         display: block
         font-family: $montserratThin
         font-size: 18px
         color: #222222
+        @include breakpoint(mobile-l)
+          font-size: 13px
